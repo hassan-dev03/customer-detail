@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Customer Detail</h1>
+
+    <input type="text" id="expense-name" placeholder="Customer Name" required>
+    <input type="text" id="description" placeholder="Phone Number">
+
+    <select id="expense-category">
+        <option value="">Select Category</option>
+        <option value="Shalwar kameez">Shalwar kameez</option>
+        <option value="Trouser Shirt">Trouser Shirt</option>
+        <option value="Pent">Pent</option>
+        <option value="Others">Others</option>
+    </select>
+    <button id="addBtn">Add</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Phone Number</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="expense-list"></tbody>
+    </table>
+    <div id="totalAmount"></div>
+
+    <!-- Size popup -->
+    <div id="sizeModal" class="modal">
+        <div class="modal-content">
+            <h2 id="sizeTitle">Size Details</h2>
+
+            <table class="size-table">
+                <thead>
+                    <tr>
+                        <th>Measurement</th>
+                        <th>Size</th>
+                    </tr>
+                </thead>
+                <tbody id="sizeBody"></tbody>
+            </table>
+
+            <div class="modal-actions">
+                <button id="editSizeBtn">Edit</button>
+                <button id="saveSizeBtn">Save</button>
+                <button id="closeSizeBtn" class="btn-gray">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
